@@ -81,13 +81,13 @@ export default class RtcClient {
    * 创建客户端对象
    */
   createClient (): void {
-    const clientConfig = {
+    const clientConfig: ClientConfig = {
       mode: 'rtc',
       sdkAppId: this.sdkAppId,
       userId: this.userId,
       userSig: this.userSig
     }
-    this.client = TRTC.createClient(<ClientConfig>clientConfig)
+    this.client = TRTC.createClient(clientConfig)
   }
 
   /**
